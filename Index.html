@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>運試しQRくじ</title>
+<style>
+body{
+font-family:sans-serif;
+text-align:center;
+background:#f0f8ff;
+padding-top:50px;
+}
+
+button{
+font-size:24px;
+padding:20px 40px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:10px;
+}
+
+#result{
+font-size:32px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎯 運試しQRくじ</h1>
+
+<button onclick="draw()">くじを引く</button>
+
+<div id="result"></div>
+
+<script>
+
+function draw(){
+
+let r=Math.random()
+
+let result=""
+
+if(r<0.05){
+result="🎉 特賞！ 景品GET！"
+}
+
+else if(r<0.25){
+result="😀 大吉！ クオカード！"
+}
+
+else if(r<0.6){
+result="🙂 中吉！ お菓子！"
+}
+
+else{
+result="😅 小吉！ ティッシュ！"
+}
+
+document.getElementById("result").innerHTML=result
+
+}
+
+</script>
+
+</body>
+</html>
